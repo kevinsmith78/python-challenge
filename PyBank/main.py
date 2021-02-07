@@ -1,3 +1,4 @@
+import csv
 #The total number of months included in the dataset
 total_month=0
 #The net total amount of "Profit/Losses" over the entire period
@@ -9,6 +10,19 @@ greatest_increase = {}
 #The greatest decrease in losses (date and amount) over the entire period
 greatest_decrease = {}
 
+
+file_path = "./Resources/budget_data.csv"
+with open(file_path) as csvfile:
+    # CSV reader specifies delimiter and variable that holds contents
+    csvreader = csv.reader(csvfile)
+    # Read the header row first(skip this step if there is no header)
+    csv_header = next(csvreader)
+    print(f"CSV Header: {csv_header}")
+    # Read each row of data after the header
+    
+    for row in csvreader:
+        print(row)
+       
 
 
 
