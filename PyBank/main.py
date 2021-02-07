@@ -37,7 +37,7 @@ if (profit > greatest_increase["amount"]):
 print("financial Analysis")
 print("----------------------")
 print(f"Total Months: {total_months}")
-print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})
+print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
 #results should look like
 #Financial Analysis
 #----------------------------
