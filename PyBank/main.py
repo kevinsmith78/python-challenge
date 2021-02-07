@@ -1,6 +1,7 @@
 import csv
 #The total number of months included in the dataset
 total_months= 0
+profit= 0
 total_profit_loss_amount = 0.00
 average_profit_loss = 0.00
 greatest_increase = {"date":"", "amount": 0}
@@ -24,7 +25,7 @@ with open(file_path) as csvfile:
     for row in csvreader:
        #The total number of months included in the dataset
         total_months = total_months + 1
-        total_revenue = total_revenue + int(row["profit"])
+        profit = profit + 1
         date = row[0]
         profit = float(row[1])
 #The net total amount of "Profit/Losses" over the entire period
