@@ -21,6 +21,8 @@ with open(file_path) as csvfile:
     # Read each row of data after the header
     
     for row in csvreader:
+       #The total number of months included in the dataset
+       total_months = total_month + 1
         print(row)
        
 
