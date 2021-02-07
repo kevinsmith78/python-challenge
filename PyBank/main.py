@@ -24,7 +24,7 @@ with open(file_path) as csvfile:
     for row in csvreader:
        #The total number of months included in the dataset
         total_months = total_months + 1
-        total_revenue = total_revenue + int(row["Revenue"])
+        total_revenue = total_revenue + float(row[1])
         date = row[0]
         profit = float(row[1])
 #The net total amount of "Profit/Losses" over the entire period
