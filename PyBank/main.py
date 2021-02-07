@@ -25,16 +25,15 @@ with open(file_path) as csvfile:
     for row in csvreader:
        #The total number of months included in the dataset
         total_months = total_months + 1
-        profit = profit + 1
         date = row[0]
         profit = float(row[1])
 #The net total amount of "Profit/Losses" over the entire period
 #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
-    revenue_average = int(row) - Prev_Revenue
-    Prev_Revenue = int(row["Revenue"])
-    Change_month = Change_month +(row["date"])
+    #revenue_average = int(row) - Prev_Revenue
+    #Prev_Revenue = int(row["Revenue"])
+    #Change_month = Change_month +(row["date"])
 
-    revenue_average=sum(Revenue_Change_Index) / len(Revenue_Change_Index)
+    #revenue_average=sum(Revenue_Change_Index) / len(Revenue_Change_Index)
 
 #The greatest increase in profits (date and amount) over the entire period
 if (profit > greatest_increase["amount"]):
