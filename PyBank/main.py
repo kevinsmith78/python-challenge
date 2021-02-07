@@ -22,13 +22,17 @@ with open(file_path) as csvfile:
     
     for row in csvreader:
        #The total number of months included in the dataset
-       total_months = total_month + 1
-        print(row)
+        total_months = total_month + 1
+        
+         print(row)
        
 
 
 
-
+#print results
+print("financial Analysis")
+print("----------------------")
+print(f"Total Months: {total_months}")
 #results should look like
 #Financial Analysis
 #----------------------------
