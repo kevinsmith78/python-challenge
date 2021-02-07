@@ -7,7 +7,9 @@ greatest_increase = {"date":"", "amount": 0}
 greatest_decrease = {"date":"", "amount": 0}
 Prev_Revenue = 0.00
 Revenue_Change = 0
+Revenue_Change_Index = {}
 total_revenue = 0
+Change_month ={}
 
 
 file_path = "./Resources/budget_data.csv"
@@ -27,7 +29,12 @@ with open(file_path) as csvfile:
         profit = float(row[1])
 #The net total amount of "Profit/Losses" over the entire period
 #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
-revenue_average = sum ()
+    revenue_average = int(row["Revenue"]) - Prev_Revenue
+    Prev_Revenue = int(row["Revenue"])
+    Change_month = Change_month +(row["date"])
+
+    revenue_average=sum(Revenue_Change_Index) / len(Revenue_Change_Index)
+
 #The greatest increase in profits (date and amount) over the entire period
 if (profit > greatest_increase["amount"]):
     greatest_increase["date"] = date
@@ -42,6 +49,7 @@ if (profit < greatest_decrease["amount"]):
 print("financial Analysis")
 print("----------------------")
 print(f"Total Months: {total_months}")
+print(f"Average Change: (${revenue_average['amount']}")
 print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
 #results should look like
