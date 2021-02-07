@@ -24,7 +24,7 @@ with open(file_path) as csvfile:
     for row in csvreader:
        #The total number of months included in the dataset
         total_months = total_months + 1
-        total_revenue = total_revenue + 1
+        total_revenue = total_revenue + int(row["profit"])
         date = row[0]
         profit = float(row[1])
 #The net total amount of "Profit/Losses" over the entire period
@@ -49,7 +49,7 @@ if (profit < greatest_decrease["amount"]):
 print("financial Analysis")
 print("----------------------")
 print(f"Total Months: {total_months}")
-print(f"Total Revenue:{total_revenue}"
+print(f"Total Revenue:{total_revenue}")
 #print(f"Average Change: (${revenue_average['amount']}")
 print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
