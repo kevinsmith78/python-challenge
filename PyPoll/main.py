@@ -1,8 +1,10 @@
 import csv
 #The total number of  votes casr
-Votes = 0
-Winner_v = 0
-T_Candidates = 0
+Votes = []
+County = []
+Candidates =[]
+khan = []
+correy = []
 greatest_votes = ["",0}]
 C_options = []
 candidate_v = {}
@@ -13,22 +15,21 @@ with open(file_path) as csvfile:
     # Read the header row first(skip this step if there is no header)
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
-    # Read each row of data after the header
-    for row in csvreader:
+    
 
 file_path = "./Resources/election_data.csv"
 out_file = "./Analysis/output.txt"
 
 
 
-      
+# Read each row of data after the header
+    for row in csvreader:
+        # The total number of votes cast (loop)
+        votes = votes + 1
+        t_candidates = row["Candidate"]
 
+        if row[]
 
-
-
-
-
-# The total number of votes cast
 # A complete list of candidates who received votes
 # The percentage of votes each candidate won
 # The total number of votes each candidate won
