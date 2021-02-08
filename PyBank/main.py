@@ -35,18 +35,15 @@ with open(file_path) as csvfile:
 total_profit_loss_amount = int(total_profit_loss_amount)
 average_profit = int(average_profit)
 
-
-
-
 #The greatest increase in profits (date and amount) over the entire period
 if (profit > greatest_increase["amount"]):
     greatest_increase["date"] = date
     greatest_increase["amount"] = profit
-
 #The greatest decrease in losses (date and amount) over the entire period
 if (profit < greatest_decrease["amount"]):
-    greatest_decrease["amount"] = profit
     greatest_decrease["date"] = date
+    greatest_decrease["amount"] = profit
+
 
 
 #print results
@@ -65,3 +62,12 @@ print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_dec
 #Average  Change: $-2315.12
 #Greatest Increase in Profits: Feb-2012 ($1926159)
 #Greatest Decrease in Profits: Sep-2013 ($-2196167)
+
+with open(out_file, 'w') as ouputfile:
+        out_file.write ("financial Analysis") 
+        out_file.write("----------------------")
+        out_file.write("Total Months: {total_months}")
+        out_file.writeprint("Total Revenue:${total_profit_loss_amount}")
+        out_file.writeprint("Average Change: ${average_profit}")
+        out_file.writeprint("Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
+        out_file.writeprint("Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
