@@ -6,14 +6,9 @@ total_profit_loss_amount = 0.00
 average_profit_loss = 0.00
 greatest_increase = {"date":"", "amount": 0}
 greatest_decrease = {"date":"", "amount": 0}
-Prev_Revenue = 0.00
-Revenue_Change = 0
-Revenue_Change_Index = {}
-total_revenue = 0
-Change_month ={}
-
-
 file_path = "./Resources/budget_data.csv"
+out_file = "./Analysis/output.txt"
+
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile)
@@ -21,20 +16,15 @@ with open(file_path) as csvfile:
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
     # Read each row of data after the header
-    
     for row in csvreader:
        #The total number of months included in the dataset
         total_months = total_months + 1
         date = row[0]
         profit = float(row[1])
 #The net total amount of "Profit/Losses" over the entire period
+total_profit_loss_amount = total_profit_loss_amount + int(row["amount"])
+
 #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
-    #revenue_average = int(row) - Prev_Revenue
-    #Prev_Revenue = int(row["Revenue"])
-    #Change_month = Change_month +(row["date"])
-
-    #revenue_average=sum(Revenue_Change_Index) / len(Revenue_Change_Index)
-
 #The greatest increase in profits (date and amount) over the entire period
 if (profit > greatest_increase["amount"]):
     greatest_increase["date"] = date
@@ -49,7 +39,7 @@ if (profit < greatest_decrease["amount"]):
 print("financial Analysis")
 print("----------------------")
 print(f"Total Months: {total_months}")
-print(f"Total Revenue:{total_revenue}")
+print(f"Total Revenue:{'amount'}")
 #print(f"Average Change: (${revenue_average['amount']}")
 print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
