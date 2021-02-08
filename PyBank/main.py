@@ -10,6 +10,8 @@ file_path = "./Resources/budget_data.csv"
 out_file = "./Analysis/output.txt"
 previous_change = 0
 total_profit_change = 0
+average_profit = 0.00
+
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile)
@@ -29,6 +31,9 @@ with open(file_path) as csvfile:
         total_profit_change = total_profit_change + profit_change
         average_profit = total_profit_loss_amount/ total_months
         average_profit_change = total_profit_change/(total_months)
+#Decimal Places
+total_profit_loss_amount = int(total_profit_loss_amount)
+average_profit = int(average_profit)
 
 
 
@@ -48,7 +53,7 @@ print("financial Analysis")
 print("----------------------")
 print(f"Total Months: {total_months}")
 print(f"Total Revenue:${total_profit_loss_amount}")
-print(f"Average Change: ${average_profit}['amount']"
+print(f"Average Change: ${average_profit}")
 print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
 #results should look like
