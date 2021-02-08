@@ -1,0 +1,1 @@
+financial Analysis----------------------Total Months: {total_months}Total Revenue:${total_profit_loss_amount}Average Change: ${average_profit}Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})

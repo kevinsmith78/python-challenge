@@ -11,6 +11,7 @@ out_file = "./Analysis/output.txt"
 previous_change = 0
 total_profit_change = 0
 average_profit = 0.00
+revenue_change = []
 
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
@@ -31,6 +32,7 @@ with open(file_path) as csvfile:
         total_profit_change = total_profit_change + profit_change
         average_profit = total_profit_loss_amount/ total_months
         average_profit_change = total_profit_change/(total_months)
+        
 #Decimal Places
 total_profit_loss_amount = int(total_profit_loss_amount)
 average_profit = int(average_profit)
