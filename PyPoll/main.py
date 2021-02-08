@@ -1,12 +1,12 @@
 import csv
-#The total number of  votes cast
-Votes = []
-County = []
-Candidates =[]
-khan = []
-correy = []
-li = []
-otooley =[]
+#Define Variables
+total_count_votes = 0
+Khan_V = 0
+Correy_v = 0
+li_v = 0
+otooley_v = 0
+
+
 
 
 with open(file_path) as csvfile:
