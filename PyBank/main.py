@@ -63,11 +63,11 @@ print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_dec
 #Greatest Increase in Profits: Feb-2012 ($1926159)
 #Greatest Decrease in Profits: Sep-2013 ($-2196167)
 
-with open(out_file, 'w') as ouputfile:
-        out_file.write(f"financial Analysis") 
-        out_file.write(f"----------------------")
-        out_file.write(f"Total Months: {total_months}")
-        out_file.write(f"Total Revenue:${total_profit_loss_amount}")
-        out_file.write(f"Average Change: ${average_profit}")
-        out_file.write(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
-        out_file.write(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
+with open(out_file, 'w') as outputfile:
+        outputfile.write("financial Analysis") 
+        outputfile.write("----------------------")
+        outputfile.write("Total Months: {total_months}")
+        outputfile.write("Total Revenue:${total_profit_loss_amount}")
+        outputfile.write("Average Change: ${average_profit}")
+        outputfile.write("Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
+        outputfile.write("Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
