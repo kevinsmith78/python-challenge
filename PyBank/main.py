@@ -32,19 +32,19 @@ with open(file_path) as csvfile:
         total_profit_change = total_profit_change + profit_change
         average_profit = total_profit_loss_amount/ total_months
         average_profit_change = total_profit_change/(total_months)
-        
+       #The greatest increase in profits (date and amount) over the entire period
+        if (profit > greatest_increase["amount"]):
+            greatest_increase["date"] = date
+            greatest_increase["amount"] = profit
+        #The greatest decrease in losses (date and amount) over the entire period
+        if (profit < greatest_decrease["amount"]):
+            greatest_decrease["date"] = date
+            greatest_decrease["amount"] = profit 
 #Decimal Places
 total_profit_loss_amount = int(total_profit_loss_amount)
 average_profit = int(average_profit)
 
-#The greatest increase in profits (date and amount) over the entire period
-if (profit > greatest_increase["amount"]):
-    greatest_increase["date"] = date
-    greatest_increase["amount"] = profit
-#The greatest decrease in losses (date and amount) over the entire period
-if (profit < greatest_decrease["amount"]):
-    greatest_decrease["date"] = date
-    greatest_decrease["amount"] = profit
+
 
 
 
