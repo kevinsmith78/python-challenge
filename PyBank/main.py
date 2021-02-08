@@ -42,10 +42,11 @@ average_profit = int(average_profit)
 if (profit > greatest_increase["amount"]):
     greatest_increase["date"] = date
     greatest_increase["amount"] = profit
+
 #The greatest decrease in losses (date and amount) over the entire period
 if (profit < greatest_decrease["amount"]):
-    greatest_decrease["date"] = date
     greatest_decrease["amount"] = profit
+    greatest_decrease["date"] = date
 
 
 #print results
