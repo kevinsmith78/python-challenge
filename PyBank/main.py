@@ -3,12 +3,13 @@ import csv
 total_months= 0
 profit= 0
 total_profit_loss_amount = 0.00
-average_profit_loss = 0.00
 greatest_increase = {"date":"", "amount": 0}
 greatest_decrease = {"date":"", "amount": 0}
+profit_change = 0
 file_path = "./Resources/budget_data.csv"
 out_file = "./Analysis/output.txt"
-
+previous_change = 0
+total_profit_change = 0
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile)
@@ -23,10 +24,15 @@ with open(file_path) as csvfile:
         #The net total amount of "Profit/Losses" over the entire period
         profit = float(row[1])
         total_profit_loss_amount = total_profit_loss_amount + profit        
+        #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+        profit_change = profit - previous_change
+        total_profit_change = total_profit_change + profit_change
+        average_profit = total_profit_loss_amount/ total_months
+        average_profit_change = total_profit_change/(total_months)
 
-   
 
-#Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
+
+
 #The greatest increase in profits (date and amount) over the entire period
 if (profit > greatest_increase["amount"]):
     greatest_increase["date"] = date
@@ -42,7 +48,7 @@ print("financial Analysis")
 print("----------------------")
 print(f"Total Months: {total_months}")
 print(f"Total Revenue:${total_profit_loss_amount}")
-#print(f"Average Change: (${revenue_average['amount']}")
+print(f"Average Change: ${average_profit}['amount']"
 print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
 print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
 #results should look like
