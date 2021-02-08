@@ -1,5 +1,5 @@
 import csv
-#The total number of  votes casr
+#The total number of  votes cast
 Votes = []
 County = []
 Candidates =[]
@@ -19,13 +19,13 @@ file_path = "./Resources/election_data.csv"
 out_file = "./Analysis/output.txt"
 
 # Read each row of data after the header
-    for row in csvreader:
-        # The total number of votes cast (loop)
-        votes.append(int(row[0])
-        county.append(row[1])
-        candidates.append(row[2])
-        t_votes = (len(Votes))
-        print (t_votes)
+for row in csvreader:
+    # The total number of votes cast (loop)
+    votes.append(int(row[0])
+    County.append(row[1])
+    Candidates.append(row[2])
+    t_votes = (len(Votes))
+    print (t_votes)
 
 
         #if row[]
