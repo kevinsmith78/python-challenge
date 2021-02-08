@@ -21,7 +21,7 @@ with open(file_path) as csvfile:
         total_months = total_months + 1
         date = row[0]
         profit = float(row[1])
-        total_profit_loss_amount = total_profit_loss_amount + row["amount"])
+        total_profit_loss_amount = total_profit_loss_amount + (row["amount"])
 #The net total amount of "Profit/Losses" over the entire period
 
 
