@@ -22,16 +22,32 @@ for row in csvreader:
     if candidate in candidates:
         candidate_index = candidates.index(candidate)
         total_count_votes[candidate_index] = total_count_votes[candidate_index] + 1
-        else:
-            candidates.append(candidate)
-            total_count_votes.append(1)
+    else:
+        candidates.append(candidate)
+        total_count_votes.append(1)
 # The percentage of votes each candidate won
 percentages = []
-max_votes = total_count_votes[0]
-max_out = 0
+m_votes = total_count_votes[0]
+m_out = 0
 for count in range(len(candidates)):
     vote_percentage = total_count_votes[count]/number_votes*100
     percentages.append(vote_percentage)
+    if total_count_votes[count] > m_votes
+    m_votes = total_count_votes[count]
+    print(m_votes)
+    m_out = count
+winner = candidates[m_out]
+#print results
+print("ELection Results")
+print("----------------------")
+print(f"Total Votes": {total_count_votes})
+print("----------------------")
+print(f"Total Months: {total_months}")
+print(f"Total Revenue:${total_profit_loss_amount}")
+print(f"Average Change: ${average_profit}")
+print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
+print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
+
 
 
 
