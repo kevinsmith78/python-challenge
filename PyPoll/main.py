@@ -1,6 +1,9 @@
 import csv
-
-
+votes = 0
+vote count = 0
+vote_percent = []
+candidates = []
+diff_candidates = []
 file_path = "./Resources/election_data.csv"
 out_file = "./Analysis/output.txt"
 
@@ -12,19 +15,18 @@ with open(file_path) as csvfile:
     print(f"CSV Header: {csv_header}")
 # Read each row of data after the header
     for row in csvreader:
+        votes = votes + 1
+        candidate.append(row[2])
+        
     
-
-
-
 #print results
-print("ELection Results")
+print("Election Results")
 print("----------------------")
-print(f"Total Votes: {total_votes!T}")
+print("Total Votes:")
 print("----------------------")
-for count in range(len(candidates)):
-    print(f"{candidates[count]}: {percentage[count]}% ({vote_counts[count]})")
+
 print("----------------------")
-print(f"Winner: {winner}")
+
 print("----------------------")
 
 
