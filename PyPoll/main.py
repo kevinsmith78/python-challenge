@@ -7,14 +7,14 @@ correy = 0
 otooley = 0
 winner_count = 0
 #Generate a list of the candidates
-can_list = ["Li", "Kahn", "Correy", "ottoley"]
+can_list = ["li", "kahn", "correy", "ottoley"]
 #Set input and outfile
 file_path = "./Resources/election_data.csv"
-#out_file = "./Analysis/output.txt"
+out_file = "./Analysis/output.txt"
 
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
-    csvreader = csv.reader(csvfile)
+    csvreader = csv.reader(csvfile,)
     # Read the header row first(skip this step if there is no header)
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
@@ -22,14 +22,15 @@ with open(file_path) as csvfile:
 for row in csvreader:
     votes = votes + 1 
 # Calculate votes for Li
-    if (row[2]) == 'Li'
-    li = li + 1
-    if (row[2]) == 'Khan'
-    khan = khan + 1
-    if (row[2]) == 'Correy'
-    correy = correy + 1
-    if row[2] == 'otooley'
-    otooley = otooley + 1
+#    if (row[2]) == 'Li':
+#        li = li + 1
+# Calculate votes for Kahn    
+#    if (row[2]) == 'Khan':
+#        khan = khan + 1
+#   if (row[2]) == 'Correy':
+#        correy = correy + 1
+    #if (row[2]) == 'OTooley':
+    #    otooley = otooley + 1
 
     
 
@@ -42,7 +43,7 @@ print("----------------------")
 print(f"Li: {Li}")
 print(f"Khan: {Khan}")
 print(f"Correy: {Correy}")
-print(f"Otooley" {Otooley})
+print(f"O'tooley: {Otooley}")
 
 print("----------------------")
 
