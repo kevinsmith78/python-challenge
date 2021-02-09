@@ -42,13 +42,13 @@ with open(file_path) as csvfile:
     tot_pct = [k_pct,c_pct,li_pct,o_pct]
 # Simplify results
     if li_t > correy_t and li_t > otooley_t and li_t > khan_t:
-        winner = "Li"
+            winner_count = "Li"
     if khan_t > correy_t and khan_t > li_t >khan_t > otooley_t:
-        winner = "Khan"
+            winner_count = "Khan"
     if correy_t > otooley_t and correy_t > khan_t and correy_t > li_t:
-        winner = "Correy"
+        winner_count = "Correy"
     if otooley_t > correy_t and otooley_t > li_t and otooley_t > khan_t:
-        winner = "O'Tooley"  
+        winner_count = "O'Tooley"  
 #print results
 print("Election Results")
 print("----------------------")
@@ -59,7 +59,7 @@ print(f"Khan: {k_pct}% ({khan_t})")
 print(f"Correy: {c_pct}% ({correy_t})")
 print(f"O'tooley: {o_pct}% ({otooley_t})")
 print("----------------------")
-print(f"Winner: {winner}")
+print(f"Winner: {winner_count}")
 print("----------------------")
 
 
