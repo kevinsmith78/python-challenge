@@ -1,11 +1,16 @@
 import csv
+#Variables needed for calculation
 votes = 0
-vote count = 0
-vote_percent = []
-candidates = []
-diff_candidates = []
+Li = 0
+Khan = 0
+Correy = 0
+Otooley = 0
+winner_count = 0
+#Generate a list of the candidates
+can_list = ["Li", "Kahn", "Correy", "ottoley"]
+#Set input and outfile
 file_path = "./Resources/election_data.csv"
-out_file = "./Analysis/output.txt"
+#out_file = "./Analysis/output.txt"
 
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
@@ -14,16 +19,30 @@ with open(file_path) as csvfile:
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
 # Read each row of data after the header
-    for row in csvreader:
-        votes = votes + 1
-        candidate.append(row[2])
-        
+for row in csvreader:
+    votes = votes + 1 
+# Calculate votes for Li
+    if (row[2]) == 'Li'
+    Li = Li + 1
+    if (row[2]) == 'Khan'
+    Khan = Khan + 1
+    if (row[2]) == 'Correy'
+    Correy = Correy + 1
+    if row[2] == 'otooley'
+    Otooley = Otooley + 1
+
+    
+
     
 #print results
 print("Election Results")
 print("----------------------")
-print("Total Votes:")
+print(f"Total Votes: {votes}")
 print("----------------------")
+print(f"Li: {Li}")
+print(f"Khan: {Khan}")
+print(f"Correy: {Correy}")
+print(f"Otooley" {Otooley})
 
 print("----------------------")
 
