@@ -32,20 +32,20 @@ m_out = 0
 for count in range(len(candidates)):
     vote_percentage = total_count_votes[count]/number_votes*100
     percentages.append(vote_percentage)
-    if total_count_votes[count] > m_votes
-    m_votes = total_count_votes[count]
-    print(m_votes)
-    m_out = count
+    if total_count_votes[count] > m_votes:
+        m_votes = total_count_votes[count]
+        print(m_votes)
+        m_out = count
 winner = candidates[m_out]
 #print results
 print("ELection Results")
 print("----------------------")
-print(f"Total Votes": {total_count_votes})
+print(f"Total Votes: {total_count_votes}")
 print("----------------------")
 for count in range(len(candidates)):
     print(f"{candidates[count]}: {percentage[count]}% ({vote_counts[count]})")
 print("----------------------")
-print(f"Winner: {winner})
+print(f"Winner: {winner}")
 print("----------------------")
 
 
