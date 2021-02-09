@@ -42,11 +42,12 @@ print("ELection Results")
 print("----------------------")
 print(f"Total Votes": {total_count_votes})
 print("----------------------")
-print(f"Total Months: {total_months}")
-print(f"Total Revenue:${total_profit_loss_amount}")
-print(f"Average Change: ${average_profit}")
-print(f"Greatest Increase In Profits {greatest_increase['date']} (${greatest_increase['amount']})")
-print(f"Greatest Decrease In Profits {greatest_decrease['date']} (${greatest_decrease['amount']})")
+for count in range(len(candidates)):
+    print(f"{candidates[count]}: {percentage[count]}% ({vote_counts[count]})")
+print("----------------------")
+print(f"Winner: {winner})
+print("----------------------")
+
 
 
 
