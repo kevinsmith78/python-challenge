@@ -5,9 +5,8 @@ Khan_V = 0
 Correy_v = 0
 li_v = 0
 otooley_v = 0
-
-
-
+file_path = "./Resources/election_data.csv"
+out_file = "./Analysis/output.txt"
 
 with open(file_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
@@ -15,20 +14,14 @@ with open(file_path) as csvfile:
     # Read the header row first(skip this step if there is no header)
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
-file_path = "./Resources/election_data.csv"
-out_file = "./Analysis/output.txt"
-
 # Read each row of data after the header
 for row in csvreader:
     # The total number of votes cast (loop)
-    votes.append(int(row[0])
-    County.append(row[1])
-    Candidates.append(row[2])
-    t_votes = (len(Votes))
-    print (t_votes)
+    total_count_votes = total_votes + 1
+    can_reg = row[2]
+if can_reg in can_diff:
+    candidate_list = candidate
 
-
-        #if row[]
 
 # A complete list of candidates who received votes
 # The percentage of votes each candidate won
