@@ -40,11 +40,15 @@ with open(file_path) as csvfile:
     o_pct = round (otooley_t/votes * 100,2)
 #Create Lists for percentages
     tot_pct = [k_pct,c_pct,li_pct,o_pct]
-#zip the vairables (dictionary) together to produce results
-    total_pct = dict(zip(can_list,tot_pct))
-#find the winner using max function
-winner = max(total_pct, key=total_pct.get)
-   
+# Simplify results
+    if li_t > correy_t and li_t > otooley_t and li_t > khan_t:
+        winner = "Li"
+    if khan_t > correy_t and khan_t > li_t >khan_t > otooley_t:
+        winner = "Khan"
+    if correy_t > otooley_t and correy_t > khan_t and correy_t > li_t:
+        winner = "Correy"
+    if otooley_t > correy_t and otooley_t > li_t and otooley_t > khan_t:
+        winner = "O'Tooley"  
 #print results
 print("Election Results")
 print("----------------------")
@@ -55,7 +59,7 @@ print(f"Khan: {k_pct}% ({khan_t})")
 print(f"Correy: {c_pct}% ({correy_t})")
 print(f"O'tooley: {o_pct}% ({otooley_t})")
 print("----------------------")
-
+print(f"Winner: {winner}")
 print("----------------------")
 
 
