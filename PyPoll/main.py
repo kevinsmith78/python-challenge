@@ -18,7 +18,12 @@ for row in csvreader:
     total_count_votes = total_count_votes + 1
     candidate = row[2]
 # A complete list of candidates who received votes
-    if 
+    if candidate in candidates:
+        candidate_index = candidates.index(candidate)
+        total_count_votes[candidate_index] = total_count_votes[candidate_index] + 1
+        else:
+            candidates.append(candidate)
+            
 
 
 
