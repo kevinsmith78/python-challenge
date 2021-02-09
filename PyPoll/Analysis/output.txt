@@ -1,0 +1,1 @@
+Election Results----------------------Total Votes: {votes}----------------------Li: {li_pct}% ({li_t})Khan: {k_pct}% ({khan_t})Correy: {c_pct}% ({correy_t})O'tooley: {o_pct}% ({otooley_t})----------------------Winner: {winner_count}----------------------
