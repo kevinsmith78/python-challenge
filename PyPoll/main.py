@@ -33,23 +33,27 @@ with open(file_path) as csvfile:
 #Calculate votes for otooley
         if (row[2]) == "O'Tooley":
             otooley_t = otooley_t + 1
-    li_pct = round(li_t)/votes * 100,2)
-    
-
-
-    
-
-    
+#Calculate Percent Of votes   
+    li_pct = round(li_t/votes * 100,2)
+    k_pct = round (khan_t/votes * 100,2)
+    c_pct = round (correy_t/votes * 100,2)
+    o_pct = round (otooley_t/votes * 100,2)
+#Create Lists for percentages
+    tot_pct = [k_pct,c_pct,li_pct,o_pct]
+#zip the vairables (dictionary) together to produce results
+    total_pct = dict(zip(can_list,tot_pct))
+#find the winner using max function
+winner = max(total_pct, key=total_pct.get)
+   
 #print results
 print("Election Results")
 print("----------------------")
 print(f"Total Votes: {votes}")
 print("----------------------")
-print(f"Li: {li_t}")
-print(f"Khan: {khan_t}")
-print(f"Correy: {correy_t}")
-print(f"O'tooley: {otooley_t}")
-
+print(f"Li: {li_pct}% ({li_t})")
+print(f"Khan: {k_pct}% ({khan_t})")
+print(f"Correy: {c_pct}% ({correy_t})")
+print(f"O'tooley: {o_pct}% ({otooley_t})")
 print("----------------------")
 
 print("----------------------")
