@@ -1,10 +1,10 @@
 import csv
 #Variables needed for calculation
 votes = 0
-Li = 0
-Khan = 0
-Correy = 0
-Otooley = 0
+li = 0
+khan = 0
+correy = 0
+otooley = 0
 winner_count = 0
 #Generate a list of the candidates
 can_list = ["Li", "Kahn", "Correy", "ottoley"]
@@ -23,13 +23,13 @@ for row in csvreader:
     votes = votes + 1 
 # Calculate votes for Li
     if (row[2]) == 'Li'
-    Li = Li + 1
+    li = li + 1
     if (row[2]) == 'Khan'
-    Khan = Khan + 1
+    khan = khan + 1
     if (row[2]) == 'Correy'
-    Correy = Correy + 1
+    correy = correy + 1
     if row[2] == 'otooley'
-    Otooley = Otooley + 1
+    otooley = otooley + 1
 
     
 
