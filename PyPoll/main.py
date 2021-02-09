@@ -1,9 +1,13 @@
 import csv
 #Define Variables
-total_count_votes = []
-number_votes = 0
-candidates = [] 
-percentage = []
+votes = []
+count = []
+candidates = []
+khan = []
+correy = []
+li = []
+otooley = []
+
 file_path = "./Resources/election_data.csv"
 out_file = "./Analysis/output.txt"
 
@@ -15,28 +19,21 @@ with open(file_path) as csvfile:
     print(f"CSV Header: {csv_header}")
 # Read each row of data after the header
     for row in csvreader:
-    # The total number of votes cast (loop)
-        total_count_votes = total_count_votes + 1
-        candidate = row[2]
-# A complete list of candidates who received votes
-    if candidate in candidates:
-        candidate_index = candidates.index(candidate)
-        total_count_votes = total_count_votes[candidate_index] + 1
-    else:
-        candidates.append(candidate)
-        total_count_votes.append(1)
-# The percentage of votes each candidate won
-percentages = []
-m_votes = total_count_votes[0]
-m_out = 0
-for count in range(len(candidates)):
-    vote_percentage = total_count_votes[count]/number_votes*100
-    percentages.append(vote_percentage)
-    if total_count_votes[count] > m_votes:
-        m_votes = total_count_votes[count]
-        print(m_votes)
-        m_out = count
-winner = candidates[m_out]
+    # append the data rows together
+    votes.append(int(row[0]))
+    county.append(row[1])
+    candidates.append(row[2])
+#Total number of votes
+total_votes = (len(votes))
+    for candidate in candidates
+    if candidate == "Khan":
+        khan.append(candidates)
+        khan_votes = len(khan)
+    elif candidate == "Correy":
+        correy.append
+
+
+
 #print results
 print("ELection Results")
 print("----------------------")
