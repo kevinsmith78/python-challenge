@@ -14,14 +14,14 @@ with open(file_path) as csvfile:
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
 # Read each row of data after the header
-for row in csvreader:
+    for row in csvreader:
     # The total number of votes cast (loop)
-    total_count_votes = total_count_votes + 1
-    candidate = row[2]
+        total_count_votes = total_count_votes + 1
+        candidate = row[2]
 # A complete list of candidates who received votes
     if candidate in candidates:
         candidate_index = candidates.index(candidate)
-        total_count_votes[candidate_index] = total_count_votes[candidate_index] + 1
+        total_count_votes = total_count_votes[candidate_index] + 1
     else:
         candidates.append(candidate)
         total_count_votes.append(1)
