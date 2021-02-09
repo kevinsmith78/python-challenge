@@ -1,10 +1,8 @@
 import csv
 #Define Variables
-total_count_votes = 0
-Khan_V = 0
-Correy_v = 0
-li_v = 0
-otooley_v = 0
+total_count_votes = []
+number_votes = 0
+candidates = [] 
 file_path = "./Resources/election_data.csv"
 out_file = "./Analysis/output.txt"
 
@@ -17,13 +15,13 @@ with open(file_path) as csvfile:
 # Read each row of data after the header
 for row in csvreader:
     # The total number of votes cast (loop)
-    total_count_votes = total_votes + 1
-    can_reg = row[2]
-if can_reg in can_diff:
-    candidate_list = candidate
-
-
+    total_count_votes = total_count_votes + 1
+    candidate = row[2]
 # A complete list of candidates who received votes
+    if 
+
+
+
 # The percentage of votes each candidate won
 # The total number of votes each candidate won
 # The winner of the election based on popular vote.
