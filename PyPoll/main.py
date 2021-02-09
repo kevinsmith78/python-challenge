@@ -5,7 +5,7 @@ li_t = 0
 khan_t = 0
 correy_t = 0
 otooley_t = 0
-winner_count = []
+winner_count = ''
 #Generate a list of the candidates
 can_list = ["li", "kahn", "correy", "otooley"]
 #Set input and outfile
