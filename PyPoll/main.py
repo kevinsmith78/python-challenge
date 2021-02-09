@@ -3,6 +3,7 @@ import csv
 total_count_votes = []
 number_votes = 0
 candidates = [] 
+percentage = []
 file_path = "./Resources/election_data.csv"
 out_file = "./Analysis/output.txt"
 
@@ -23,10 +24,19 @@ for row in csvreader:
         total_count_votes[candidate_index] = total_count_votes[candidate_index] + 1
         else:
             candidates.append(candidate)
-            
-
-
-
+            total_count_votes.append(1)
 # The percentage of votes each candidate won
+percentages = []
+max_votes = total_count_votes[0]
+max_out = 0
+for count in range(len(candidates)):
+    vote_percentage = total_count_votes[count]/number_votes*100
+    percentages.append(vote_percentage)
+
+
+
+
+
+
 # The total number of votes each candidate won
 # The winner of the election based on popular vote.
